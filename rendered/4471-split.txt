@@ -1,9 +1,9 @@
 support desk · kb #4471 split · one ticket per cause
- owner Piotr Sekula open reviewed 2026-10-31 · 0 days ago
+ owner Piotr Sekula closed reviewed 2026-10-31 · 0 days ago
 
   #4471 says one issue, one fix queued. Its reports hold more than one cause,
-and the queued parser fix closes only one of them.
- #4471 is not one bug. Fixing the parser leaves the booking-v3 date hint open.
+and the parser fix closed only one of them.
+ #4471 was not one bug. The parser fix shipped; the booking-v3 date hint went away only because the form was retired.
  What #4471 holds
  412 reports merged into #4471 · 2 causes
  cause | reports | tagged as | tenants | seen |  |
@@ -11,19 +11,20 @@ parser | 379 | parser ×356 · hint ×23 | 11 | 2026-04-01 → 2026-10-04 | #447
 hint | 33 | hint ×18 · parser ×15 | 3 | 2026-04-17 → 2026-09-22 | not this ticket — no ticket of its own |
 
  5 reports read as a one-day move; filed under parser by tenant.
- Each cause now has its own ticket:
- - parser: issue #1
- - hint: issue #2
+ Each cause has its own ticket. #4471 closed on 5 October:
+ - parser: issue #1, fixed by fix(dates): parse dd/mm for eu locales. Closed as completed.
+ - hint: issue #2, won't fix: the
+booking-v3 form is retired. Closed as not planned.
  What each cause is
  - parser: the shared parser reads every date month first. Every tenant on file writes the day
 first, so any date with a day up to 12 comes out with day and month swapped. This is the bug
 #4471 is named for.
  - hint: the booking-v3 form prints MM/DD/YYYY under its date field. People type month
 first because the form tells them to, and the form reads the date the tenant's way, day first. It
-happens only through the form, only at booking-v3 tenants. The parser fix does not touch it; the
-hint or the form's read order must change.
+happens only through the form, only at booking-v3 tenants. The parser fix does not touch it; engineering
+retired the form instead.
  Some reports read as a one-day move, not a swap (desk-notes.json). The desk files them by tenant
-and the table above counts them there, with a footnote. Check them again once the parser fix ships.
+and the table above counts them there, with a footnote. The parser fix has shipped: check whether they come back.
  How the reports are counted
  - The export repeats some rows where its pages overlap: one id, one report (uniqueById).
  - Each report is placed by its tenant's locale and booking form and its channel

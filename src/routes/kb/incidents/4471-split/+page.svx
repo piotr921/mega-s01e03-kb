@@ -27,8 +27,8 @@ and the queued parser fix closes only one of them.
 
 Each cause now has its own ticket:
 
-- `parser`: [issue #1](https://github.com/piotr921/mega-s01e03/issues/1)
-- `hint`: [issue #2](https://github.com/piotr921/mega-s01e03/issues/2)
+- `parser`: [issue #1](https://github.com/piotr921/mega-s01e03-kb/issues/1)
+- `hint`: [issue #2](https://github.com/piotr921/mega-s01e03-kb/issues/2)
 
 ## What each cause is
 
